@@ -5,21 +5,21 @@
 class GeekhakuCli < Formula
   desc "Generates the URL link in various formats"
   homepage "https://github.com/mokupuro/geekhaku-cli"
-  version "0.1.7"
+  version "0.1.8"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/mokupuro/geekhaku-cli/releases/download/v0.1.7/geekhaku-cli_0.1.7_darwin_x86_64.tar.gz"
-      sha256 "11cb46ede144e6d446568864ba28da8fe1a751891265dce1f168ab887be9cf82"
+    if Hardware::CPU.arm?
+      url "https://github.com/mokupuro/geekhaku-cli/releases/download/v0.1.8/geekhaku-cli_0.1.8_darwin_arm64.tar.gz"
+      sha256 "4f64ab8c592323d56dd6783a11923e7607802112f7ad35d227d8043994424377"
 
       def install
         bin.install "geekhaku-cli"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/mokupuro/geekhaku-cli/releases/download/v0.1.7/geekhaku-cli_0.1.7_darwin_arm64.tar.gz"
-      sha256 "176022142888c1003321d6701fe5aed46745e061eddcae38e92ee3ed71f534da"
+    if Hardware::CPU.intel?
+      url "https://github.com/mokupuro/geekhaku-cli/releases/download/v0.1.8/geekhaku-cli_0.1.8_darwin_x86_64.tar.gz"
+      sha256 "7af7a17cc66f5b6104fdba7e6fd6c4936f1ffbe9ef19008b05a52daa99b1e219"
 
       def install
         bin.install "geekhaku-cli"
@@ -29,16 +29,16 @@ class GeekhakuCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mokupuro/geekhaku-cli/releases/download/v0.1.7/geekhaku-cli_0.1.7_linux_arm64.tar.gz"
-      sha256 "2b9b2b551ec03edca7237b1ece25279f0a1ae11dbacdfa4bb5523ac437e2fe41"
+      url "https://github.com/mokupuro/geekhaku-cli/releases/download/v0.1.8/geekhaku-cli_0.1.8_linux_arm64.tar.gz"
+      sha256 "aefea2dce0462cb1a9bd4b39d6c92ab7471d667ba46b85eb787d4ef8db1d8cdb"
 
       def install
         bin.install "geekhaku-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mokupuro/geekhaku-cli/releases/download/v0.1.7/geekhaku-cli_0.1.7_linux_x86_64.tar.gz"
-      sha256 "6f7baacc306319aa71e5677281c76843794ee6a014766783ce0c9304abaeb792"
+      url "https://github.com/mokupuro/geekhaku-cli/releases/download/v0.1.8/geekhaku-cli_0.1.8_linux_x86_64.tar.gz"
+      sha256 "1674237ad7b0350f4fe84997f0dbbebf756b5f26864245fd9c5b62c011f628f4"
 
       def install
         bin.install "geekhaku-cli"
